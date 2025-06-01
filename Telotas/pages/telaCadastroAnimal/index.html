@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Cadastro de Animal</title>
+  <link rel="stylesheet" href="../../css/styleTelaCadastroAnimal.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li>Produtos</li>
+      <li>Clientes</li>
+      <li>Animais</li>
+      <li>Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <div class="form-header">Cadastrar Animal</div>
+  <form id="form-cadastroAnimal">
+    <div class="form-grid">
+      <input id="Nome" type="text" placeholder="Nome" />
+      <select>
+        <option disabled selected>Tipo</option>
+      </select>
+      <input id="Idade" type="text" placeholder="Idade" />
+      <input id="Peso" type="text" placeholder="Peso" />
+      <input id="CPF" type="text" placeholder="CPF" />
+      <input id="Telefone" type="text" placeholder="telefone" />
+      <input id="Tipo" type="text" placeholder="tipo" />
+    </div>
+    <button type="submit" class="btn-submit">Cadastrar</button>
+  </form>
+</div>
+  <script src="../../script/Animal/AdicionarAnimal.js"></script>
+</body>
+</html>

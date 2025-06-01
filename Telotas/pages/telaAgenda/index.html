@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Agenda</title>
+  <link rel="stylesheet" href="../../css/styleTelaAgenda.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li onclick="window.location.href='../telaProdutos'"> Produtos</li>
+      <li> Animais</li>
+      <li> Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="actions">
+      <div>
+        <button class="btn-add">Agendar Horário</button>
+        <button class="btn-remove">Cancelar Agenda</button>
+      </div>
+      <input type="text" class="search-input" placeholder="Buscar na agenda" />
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data/Horário</th>
+            <th>Funcionário</th>
+            <th>Serviço</th>
+            <th>Telefone</th>
+            <th>Concluido</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="produtos-tbody">
+          <!-- Tabelota -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const tbody = document.getElementById('produtos-tbody');
+    produtos.forEach(p => {
+      const row = `<tr>
+        <td>${p.id}</td>
+        <td>${p.nome}</td>
+        <td>${p.data}</td>
+        <td>R$ ${p.func}</td>
+        <td>${p.serv}</td>
+        <td>${p.dono}</td>
+        <td>${p.telefone}</td>
+        <td><span class="edit-icon">✏️</span></td>
+      </tr>`;
+      tbody.innerHTML += row;
+    });
+  </script>
+
+</body>
+</html>

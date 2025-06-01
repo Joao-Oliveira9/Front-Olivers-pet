@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../images/Cachorrada.png') repeat;
+  }
+  
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+  }
+  
+  .sidebar h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #34495e;
+  }
+  
+  .main {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #e0dcd7d4;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .actions button {
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-add {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .btn-remove {
+    background-color: #c0392b;
+    color: white;
+  }
+  
+  .search-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #999;
+  }
+  
+  .table-container {
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  th, td {
+    border-bottom: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+  
+  .edit-icon {
+    color: darkorange;
+    cursor: pointer;
+  }
+  

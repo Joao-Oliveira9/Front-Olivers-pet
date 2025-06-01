@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Edição de Produto</title>
+  <link rel="stylesheet" href="../../css/styleTelaEditarProduto.css"/>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li>Produtos</li>
+      <li>Animais</li>
+      <li>Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <div class="form-header">Editar Produto</div>
+      <form id = 'form-editarProdutos'>
+        <div class="form-grid">
+          <input id = 'nomeProduto' type="text" placeholder="Nome" />
+          
+          <select id="categoria">
+            <option id = 'categoria-option' value="">Categoria</option>
+          </select>
+          <input id = 'preco' type="number" step="0.01" placeholder="Preço" />
+          
+          <select id="fornecedor">
+            <option id = 'fornecedor-option' value="">Fornecedor</option>
+          </select>
+          <select id="marca">
+            <option id = 'marca-option' value="">Marca</option>
+          </select>
+          
+          <input id='qtdMin' type="number" placeholder="Qtd Min" />
+          <input id='qtdAtual' type="number" placeholder="Qtd Atual" />
+        </div>
+
+        <button type="submit" class="btn-submit">Editar</button>
+        
+        
+      </form>
+
+      <button onClick="window.location.href='../telaProdutos'"class="btn-voltar">Voltar</button>
+      <p class="warning">*Campos deixados em branco não serão alterados</p>
+
+    </div>
+  </div>
+  <script src="../../script/editarProduto.js"></script>
+</body>
+</html>

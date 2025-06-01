@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Produtos</title>
+  <link rel="stylesheet" href="../../css/styleTelaProdutos.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li> Produtos</li>
+      <li onclick="window.location.href='../telaAnimais'"> Animais</li>
+      <li onclick="window.location.href='../telaAgenda'"> Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="actions">
+      <div>
+        <button onClick="window.location.href='../telaCadastroProduto'" class="btn-add">Cadastrar Produto</button>
+        <button onClick="window.location.href='../telaRemoverProduto'" class="btn-remove">Remover Produto</button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Código</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Fornecedor</th>
+            <th>Marca</th>
+            <th>QtdMin</th>
+            <th>QtdAtual</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="produtos-tbody">
+          <!-- Tabela -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../../script/mostrarProduto.js" > </script>
+
+</body>
+</html>

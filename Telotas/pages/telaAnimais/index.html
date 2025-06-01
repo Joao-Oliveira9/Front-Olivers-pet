@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Animais</title>
+  <link rel="stylesheet" href="../../css/styleTelaAnimais.css" />
+  <script defer src="/Telotas/script/Animal/MostrarAnimal.js"></script>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li> Produtos</li>
+      <li> Animais</li>
+      <li> Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="actions">
+      <div>
+        <button onclick="window.location.href='../telaCadastroAnimal/index.html' " class="btn-add">Cadastrar Animal</button>
+        <button class="btn-remove">Remover Animal</button>
+      </div>
+      
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Tipo</th>
+            <th>Porte</th>
+            <th>Cpf</th>
+            <th>Telefone</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="animal-tbody">
+          <!-- Tabela -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

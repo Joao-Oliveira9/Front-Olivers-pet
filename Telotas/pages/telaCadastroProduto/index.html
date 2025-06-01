@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Cadastro de Produto</title>
+  <link rel="stylesheet" href="../../css/styleTelaCadastroProduto.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li>Produtos</li>
+      <li>Animais</li>
+      <li>Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <div class="form-header">Cadastrar Produto</div>
+      <form id="form-cadastroProdutos">
+        <div class="form-grid">
+          <input id = 'nomeProduto' type="text" placeholder="Nome" />
+          <input id='codigoEAN' maxlength='5' type="text" placeholder="Código" />
+          
+          <select id="categoria">
+            <option value="">Categoria</option>
+          </select>
+          <input id = 'preco' type="number" step="0.01" placeholder="Preço" />
+          
+          <select id="fornecedor">
+            <option value="">Fornecedor</option>
+          </select>
+          <select id="marca">
+            <option value="">Marca</option>
+          </select>
+          
+          <input id='qtdMin' type="number" placeholder="Qtd Min" />
+          <input id='qtdAtual' type="number" placeholder="Qtd Atual" />
+          <input id='qtdMax' type="number" placeholder="Qtd Max" />
+        </div>
+        <button type="submit" class="btn-submit">Cadastrar</button>
+        
+      </form>
+      <button onClick="window.location.href='../telaProdutos'"class="btn-voltar">Voltar</button>
+    </div>
+  </div>
+  <script src="../../script/Produto/adicionarProduto.js"></script>
+</body>
+</html>

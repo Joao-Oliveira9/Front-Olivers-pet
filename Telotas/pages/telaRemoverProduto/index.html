@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Remover Produtos</title>
+  <link rel="stylesheet" href="../../css/styleTelaRemoverProduto.css"/>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li>Produtos</li>
+      <li>Animais</li>
+      <li>Agenda</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <div class="form-header remover">Remover Produto</div>
+      <form id="form-removerProduto">
+        <input id = 'codigoEAN' maxlength='5' type="text" placeholder="Código do Produto" />
+        <button type="submit" class="btn-remove">Remover</button>
+      </form>
+
+      <button onClick="window.location.href='../telaProdutos'"class="btn-voltar">Voltar</button>
+    </div>
+  </div>
+  <script src="../../script/removerProduto.js"></script>
+</body>
+</html>

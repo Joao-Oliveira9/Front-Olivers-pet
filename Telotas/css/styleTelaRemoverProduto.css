@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../images/Cachorrada.png') repeat;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  padding-top: 20px;
+  position: fixed;
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+.main {
+  margin-left: 200px;
+  padding: 40px;
+  background-color: #e0dcd7d4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: #cccac7;
+  padding: 30px;
+  border-radius: 30px;
+  width: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: -30px -30px 30px -30px;
+}
+
+/* Estilo específico para o cabeçalho de remover */
+.form-header.remover {
+  background-color: #c03b32;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #d9e8f1;
+  color: #555;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.btn-remove {
+  width: 100%;
+  padding: 10px;
+  background-color: #c03b32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: #a53028;
+}
+
+.btn-voltar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #a53028;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
