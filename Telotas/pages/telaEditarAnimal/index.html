@@ -11,30 +11,50 @@
   <div class="sidebar">
     <h1>Oliveira’s Pets</h1>
     <ul>
-      <li>Produtos</li>
-      <li>Clientes</li>
-      <li>Animais</li>
-      <li>Agenda</li>
+      <li> Produtos</li>
+      <li> Animais</li>
+      <li> Agenda</li>
+      <li> Historico</li>
     </ul>
   </div>
 
   <div class="main">
     <div class="form-box">
       <div class="form-header">Editar Animal</div>
-  <form>
+  <form id="form-editarAnimal">
     <div class="form-grid">
-      <input type="text" placeholder="Nome" />
-      <select>
-        <option disabled selected>Tipo</option>
+      <input id="nome" type="text" placeholder="Nome" />
+      <select id="tipos" name="tipos">
+        <option value=""> Tipo</option>
+        <option value="Cachorro" > Cachorro</option>
+        <option value="Gato" > Gato</option>
+        <option value="Ave" > Ave</option>
+        <option value="Peixe" > Peixe</option>
+        <option value="Coelho" > Coelho</option>
+        <option value="Porquinho-da-índia" > Porquinho-da-índia</option>
+        <option value="Furão" > Furão</option>
+        <option value="Tartaruga" > Tartaruga</option>
+        <option value="Hamster" > Hamster</option>
+        <option value="Cavalo" > Cavalo</option>
+        <option value="Mini porco" > Mini porco</option>
+        <option value="Camundongo" > Camundongo</option>
+        <option value="Rato Doméstico" > Rato Doméstico</option>
+        <option value="Outro" > Outro</option>
       </select>
-      <input type="text" placeholder="Idade" />
-      <input type="text" placeholder="Porte" />
-      <input type="text" placeholder="CPF" />
+      <input id="idade" type="text" placeholder="Idade" />
+      <select id="porte" name="porte">
+        <option value=""> Porte</option>
+        <option value="Pequeno" > Pequeno</option>
+        <option value="Médio" > Médio</option>
+        <option value="Grande" > Grande</option>
+      </select>
+      <input id="cpf" type="text" OnKeyPress="formatar('###.###.###-##',this)" maxlength="14" minlength="14" placeholder="CPF" />
+      <input id="telefone"  OnKeyPress="formatar('(##) #####-####',this)" maxlength="15" minlength="15" type="text" placeholder="Telefone" />
     </div>
     <button type="submit" class="btn-submit">Editar</button>
     <p class="warning">*Campos deixados em branco não serão alterados</p>
   </form>
 </div>
-
+  <script src = '../../script/Animal/EditarAnimal.js'></script>
 </body>
 </html>

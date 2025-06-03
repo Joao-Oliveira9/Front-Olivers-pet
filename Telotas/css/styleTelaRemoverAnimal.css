@@ -104,3 +104,15 @@ input::placeholder {
   font-size: 12px;
   margin-top: 5px;
 }
+
+.btn-voltar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #a53028;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }

@@ -12,9 +12,9 @@
     <h1>Oliveira’s Pets</h1>
     <ul>
       <li>Produtos</li>
-      <li>Clientes</li>
       <li>Animais</li>
       <li>Agenda</li>
+      <li>Historico</li>
     </ul>
   </div>
 
@@ -24,18 +24,37 @@
   <form id="form-cadastroAnimal">
     <div class="form-grid">
       <input id="Nome" type="text" placeholder="Nome" />
-      <select>
-        <option disabled selected>Tipo</option>
+      <select id="tipos" name="tipos">
+        <option value=""> Tipo</option>
+        <option value="Cachorro" > Cachorro</option>
+        <option value="Gato" > Gato</option>
+        <option value="Ave" > Ave</option>
+        <option value="Peixe" > Peixe</option>
+        <option value="Coelho" > Coelho</option>
+        <option value="Porquinho-da-índia" > Porquinho-da-índia</option>
+        <option value="Furão" > Furão</option>
+        <option value="Tartaruga" > Tartaruga</option>
+        <option value="Hamster" > Hamster</option>
+        <option value="Cavalo" > Cavalo</option>
+        <option value="Mini porco" > Mini porco</option>
+        <option value="Camundongo" > Camundongo</option>
+        <option value="Rato Doméstico" > Rato Doméstico</option>
+        <option value="Outro" > Outro</option>
       </select>
       <input id="Idade" type="text" placeholder="Idade" />
-      <input id="Peso" type="text" placeholder="Peso" />
-      <input id="CPF" type="text" placeholder="CPF" />
-      <input id="Telefone" type="text" placeholder="telefone" />
-      <input id="Tipo" type="text" placeholder="tipo" />
+      <select id="porte" name="porte">
+        <option value=""> Porte</option>
+        <option value="Pequeno" > Pequeno</option>
+        <option value="Médio" > Médio</option>
+        <option value="Grande" > Grande</option>
+      </select>
+      <input id="cpf" type="text" OnKeyPress="formatar('###.###.###-##',this)" maxlength="14" minlength="14" placeholder="CPF" />
+      <input id="telefone"  OnKeyPress="formatar('(##) #####-####',this)" maxlength="15" minlength="15" type="text" placeholder="Telefone" />
     </div>
     <button type="submit" class="btn-submit">Cadastrar</button>
   </form>
 </div>
-  <script src="../../script/Animal/AdicionarAnimal.js"></script>
+  <script src="../../script/Animal/AdicionarAnimal.js">
+  </script>
 </body>
 </html>

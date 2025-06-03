@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Cadastro de Produto</title>
+  <link rel="stylesheet" href="../../css/styleTelaCadastroProduto.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li>Produtos</li>
+      <li>Animais</li>
+      <li>Agenda</li>
+      <li>Historico</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <div class="form-header">Cadastrar Produto</div>
+      <form id="form-cadastroProdutos">
+        <div class="form-grid">
+          <input id='codigoEAN' maxlength='5' type="text" placeholder="Código" />
+          <input id='funcionario' type="text" placeholder="Funcionario" />
+          <input id='qtdVendida' type="number" placeholder="Qtd Vendida" />
+        </div>
+        <button type="submit" class="btn-submit">Cadastrar</button>
+        
+      </form>
+      <button onClick="window.location.href='../telaHistorico'"class="btn-voltar">Voltar</button>
+    </div>
+  </div>
+  <script src="../../script/Historico/adicionarProdutoVendido.js"></script>
+</body>
+</html>

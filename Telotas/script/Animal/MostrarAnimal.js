@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>${p.peso}</td>
                     <td>${p.cpf_dono}</td>
                     <td>${p.telefone}</td>
-                    <td><span class="edit-icon" onClick = "window.location.href='../telaEditar/index.html?codigo=${p.id}'">✏️</span></td>
+                    <td><span class="edit-icon" onClick = "window.location.href='../telaEditarAnimal/index.html?id=${p.id}'">✏️</span></td>
                 </tr>`; 
                 tbody.innerHTML += row;
             }); 
