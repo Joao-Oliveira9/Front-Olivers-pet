@@ -1,3 +1,14 @@
+   function formatar(mascara, documento) {
+        let i = documento.value.length;
+         let saida = '#';
+        let texto = mascara.substring(i);
+        while (texto.substring(0, 1) != saida && texto.length ) {
+            documento.value += texto.substring(0, 1);
+            i++;
+            texto = mascara.substring(i);
+        }
+    }
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch("http://localhost:8080/mostrarFuncionarios")
         .then(response => {
@@ -8,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const select = document.getElementById('funcionarios');
 
-            data.lista.forEach(f=> {
+            data.listaFuncionarios.forEach(f=> {
                 const option = document.createElement('option');
                 option.value = f.nome;
                 option.textContent = f.nome;
@@ -21,19 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('form-cancelarAgendamento').addEventListener('submit', async function (e){
     e.preventDefault();
 
-        const data = document.getElementById('data').value;
+        const dia = document.getElementById('data').value;
         const hora = document.getElementById('horarios').value;
         const funcionario = document.getElementById('funcionarios').value;
 
-        if(!data || !hora || !funcionario){
+        if(!dia || !hora || !funcionario){
             alert("Preencha todos os campos!!");
             return;
         }
 
-        const horario = data + "T" + hora + ":00"
+        const data = dia + "T" + hora + ":00"
 
         const cancelamento = {
-            horario: horario,
+            data: data,
             funcionario: funcionario
         };
 

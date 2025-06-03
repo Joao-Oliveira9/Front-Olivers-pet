@@ -1,3 +1,14 @@
+   function formatar(mascara, documento) {
+        let i = documento.value.length;
+         let saida = '#';
+        let texto = mascara.substring(i);
+        while (texto.substring(0, 1) != saida && texto.length ) {
+            documento.value += texto.substring(0, 1);
+            i++;
+            texto = mascara.substring(i);
+        }
+    }
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch("http://localhost:8080/mostrarFuncionarios")
         .then(response => {
@@ -8,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const select = document.getElementById('funcionarios');
 
-            data.lista.forEach(f=> {
+            data.listaFuncionarios.forEach(f=> {
                 const option = document.createElement('option');
                 option.value = f.nome;
                 option.textContent = f.nome;
@@ -28,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const select = document.getElementById('servicos');
 
-            data.lista.forEach(s=> {
+            data.listaServicos.forEach(s=> {
                 const option = document.createElement('option');
                 option.value = s.tipo_de_servico;
-                option.textContent = f.tipo_de_servico;
+                option.textContent = s.tipo_de_servico;
                 select.appendChild(option);
             });
         })
@@ -43,27 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cpf = document.getElementById('cpf').value;
         const nome = document.getElementById('nome').value;
-        const servico = document.getElementById('servico').value;
-        const data = document.getElementById('data').value;
+        const servico = document.getElementById('servicos').value;
+        const dia = document.getElementById('data').value;
         const hora = document.getElementById('horarios').value;
-        const funcionario = document.getElementById('funcionario').value;
+        const funcionario = document.getElementById('funcionarios').value;
 
-        if(!cpf || !nome || !servico || !data || !hora || !funcionario){
+        if(!cpf || !nome || !servico || !dia || !hora || !funcionario){
             alert("Preencha todos os campos!!");
             return;
         }
 
-        const horario = data + "T" + hora + ":00"
+        const data = dia + "T" + hora + ":00"
 
         const agendamento = {
-            nome_do_animal: nome,
+            nome: nome,
             cpf: cpf,
             servico: servico,
-            horario: horario,
+            data: data,
             funcionario: funcionario
         };
 
-        fetch("http://localhost:8080/horarios", {
+        fetch("http://localhost:8080/agendarHorario", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
