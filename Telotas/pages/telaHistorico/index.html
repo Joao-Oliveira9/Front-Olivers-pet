@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oliveira's Pets - Historico</title>
+  <link rel="stylesheet" href="../../css/styleTelaAgenda.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Oliveira’s Pets</h1>
+    <ul>
+      <li onclick="window.location.href='../telaProdutos'"> Produtos</li>
+      <li onclick="window.location.href='../telaAnimais'"> Animais</li>
+      <li onclick="window.location.href='../telaAgenda'"> Agenda</li>
+      <li> Historico</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="actions">
+      <div>
+        <button onClick = 'window.location.href="../telaCadastrarHistorico"' class="btn-add">Cadastrar Compra</button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CodigoEAN-13</th>
+            <th>Funcionário</th>
+            <th>qtdVendida</th>
+            <th>qtdAtual</th>
+            <th>Horario/Data</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="historico-tbody">
+          <!-- Tabelota -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../../script/Historico/mostrarProdutosVendidos.js"></script>
+
+</body>
+</html>

@@ -12,16 +12,17 @@
     <h1>Oliveira’s Pets</h1>
     <ul>
       <li onclick="window.location.href='../telaProdutos'"> Produtos</li>
-      <li> Animais</li>
+      <li onclick="window.location.href='../telaAnimais'"> Animais</li>
       <li> Agenda</li>
+      <li onclick="window.location.href='../telaHistorico'"> Historico</li>
     </ul>
   </div>
 
   <div class="main">
     <div class="actions">
       <div>
-        <button class="btn-add">Agendar Horário</button>
-        <button class="btn-remove">Cancelar Agenda</button>
+        <button onClick = 'window.location.href="../telaAgendarHorario"' class="btn-add">Agendar Horário</button>
+        <button onClick = 'window.location.href="../telaRemoverAgenda"'class="btn-remove">Cancelar Agenda</button>
       </div>
       <input type="text" class="search-input" placeholder="Buscar na agenda" />
     </div>

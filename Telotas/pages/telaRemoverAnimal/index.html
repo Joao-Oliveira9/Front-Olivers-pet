@@ -11,24 +11,25 @@
   <div class="sidebar">
     <h1>Oliveira’s Pets</h1>
     <ul>
-      <li>Produtos</li>
-      <li>Clientes</li>
-      <li>Animais</li>
-      <li>Agenda</li>
+      <li> Produtos</li>
+      <li> Animais</li>
+      <li> Agenda</li>
+      <li> Historico</li>
     </ul>
   </div>
 
   <div class="main">
     <div class="form-box">
       <div class="form-header">Remover Animal</div>
-  <form>
+  <form id="form-removerAnimal">
     <div class="form-grid">
-      <input type="text" placeholder="Nome" />
-      <input type="text" placeholder="CPF" />
+      <input id="nomeAnimal" type="text" placeholder="Nome" />
+      <input id="cpfDono" type="text" placeholder="CPF" />
     </div>
     <button type="submit" class="btn-submit">Remover</button>
   </form>
+  <button onClick="window.location.href='../telaAnimais'"class="btn-voltar">Voltar</button>
 </div>
-
+<script src="../../script/Animal/DeletarAnimal.js"></script>
 </body>
 </html>

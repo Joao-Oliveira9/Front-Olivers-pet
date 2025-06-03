@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Oliveira's Pets - Animais</title>
   <link rel="stylesheet" href="../../css/styleTelaAnimais.css" />
-  <script defer src="/Telotas/script/Animal/MostrarAnimal.js"></script>
+  <script defer src="../../script/Animal/MostrarAnimal.js"></script>
 </head>
 <body>
 
   <div class="sidebar">
     <h1>Oliveira’s Pets</h1>
     <ul>
-      <li> Produtos</li>
+      <li onclick="window.location.href='../telaProdutos'"> Produtos</li>
       <li> Animais</li>
-      <li> Agenda</li>
+      <li onclick="window.location.href='../telaAgenda'"> Agenda</li>
+      <li onclick="window.location.href='../telaHistorico'"> Historico</li>
     </ul>
   </div>
 
@@ -22,7 +23,7 @@
     <div class="actions">
       <div>
         <button onclick="window.location.href='../telaCadastroAnimal/index.html' " class="btn-add">Cadastrar Animal</button>
-        <button class="btn-remove">Remover Animal</button>
+        <button onclick="window.location.href='../telaRemoverAnimal/index.html' "class="btn-remove">Remover Animal</button>
       </div>
       
     </div>

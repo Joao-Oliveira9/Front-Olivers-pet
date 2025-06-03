@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             if(data.status !== "OK") {
-                alert("Erro ao registrar produto.");
+                alert(data.message);
                 return;
             }
 
