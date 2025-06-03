@@ -22,7 +22,7 @@
         e.preventDefault();
         
         const codigoEAN = document.getElementById('codigoEAN').value;
-        const funcionario = document.getElementById('funcionario').value;
+        const funcionario = document.getElementById('funcionarios').value;
         const qtdVendida = document.getElementById('qtdVendida').value;
 
         if(!codigoEAN || !funcionario || !qtdVendida){

@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>${p.qtdVendida}</td>
                     <td>${p.qtdAtual}</td>
                     <td>${dataFormatada}</td>
-                    <td><span class="edit-icon" onClick = "window.location.href='../telaEditarProduto/index.html?codigo=${p.codigoEAN_13}'">✏️</span></td>
                 </tr>`;
                 tbody.innerHTML += row;
             });

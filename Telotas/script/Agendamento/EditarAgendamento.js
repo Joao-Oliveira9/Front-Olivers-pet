@@ -80,14 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
        e.preventDefault();
 
         const id = (new URLSearchParams(window.location.search).get('codigo'))
+        const dataAntiga = (new URLSearchParams(window.location.search).get('data'))
+
         const dia = document.getElementById('data').value;
         const hora = document.getElementById('horarios').value;
         const funcionario = document.getElementById('funcionarios').value;
         const servico = document.getElementById('servicos').value;
+
+        console.log(dia)
+        console.log(hora)
+        console.log(id)
+        console.log(dataAntiga)
+
         let data = null;
 
-        if(dia!=null && hora!= null){
-            data = dia + "T" + hora + ":00"
+        if (dataAntiga && (dia != "" || hora != "")) {
+            const [dataAntigaDia, dataAntigaHoraCompleta] = dataAntiga.split("T");
+            const dataAntigaHora = dataAntigaHoraCompleta.slice(0, 5); // "11:00"
+
+            const novoDia = dia || dataAntigaDia;
+            const novoHora = hora || dataAntigaHora;
+
+            console.log(novoDia)
+            console.log(novoHora)
+
+            data = novoDia + "T" + novoHora + ":00";
         }
 
         const agendamentoEditado = {

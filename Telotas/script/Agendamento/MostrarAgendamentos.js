@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>${p.servico}</td>
                     <td>${p.telefone_do_dono}</td>
                     <td>${p.status}</td>
-                    <td><span class="edit-icon" onClick = "window.location.href='../telaEditarHorario/index.html?codigo=${p.id}'">✏️</span></td>
+                    <td><span class="edit-icon" onClick="window.location.href='../telaEditarHorario/index.html?codigo=${p.id}&data=${p.data}'">✏️</span></td>
                 </tr>`;
                 tbody.innerHTML += row;
             });
