@@ -3,98 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oliveira's Pets - Remover Agenda</title>
-  <link rel="stylesheet" href="../../css/styleTelaRemoverAgenda.css" />
+  <title>Oliveira's Pets - Remover Produtos</title>
+  <link rel="stylesheet" href="../../css/styleTelaRemoverProduto.css"/>
 </head>
 <body>
 
   <div class="sidebar">
     <h1>Oliveira’s Pets</h1>
     <ul>
-      <li> Produtos</li>
-      <li> Clientes</li>
-      <li> Animais</li>
-      <li> Agenda</li>
+      <li>Produtos</li>
+      <li>Animais</li>
+      <li>Agenda</li>
     </ul>
   </div>
 
   <div class="main">
-    <div class="actions">
-      <div>
-        <button class="btn-add">Agendar Horário</button>
-        <button class="btn-remove">Cancelar Agenda</button>
-      </div>
-      <input type="text" class="search-input" placeholder="Buscar na agenda" />
-    </div>
+    <div class="form-box">
+      <div class="form-header remover">Cancelar Agendamento</div>
+      <form id="form-cancelarAgendamento">
+        <input id="data" OnKeyPress="formatar('####-##-##',this)" maxlength="10" minlength="10" type="text" placeholder="Data" />
+        <select id="horarios">
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+        </select>
+        <select id="funcionarios">
+        <option disabled selected>Funcionário Responsável</option>
+        </select>
+        <button type="submit" class="btn-remove">Remover</button>
+      </form>
 
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Data/Horário</th>
-            <th>Funcionário</th>
-            <th>Serviço</th>
-            <th>Dono</th>
-            <th>Telefone</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="produtos-tbody">
-          <!-- Tabelota -->
-        </tbody>
-      </table>
+      <button onClick="window.location.href='../telaAgenda'"class="btn-voltar">Voltar</button>
     </div>
   </div>
-
-  <div class="popup-overlay">
-    <div class="popup-box">
-      <div class="popup-header">
-        Cancelar Agendamento
-        <span class="close-btn">&times;</span>
-      </div>
-      <div class="popup-body">
-        <p>Deseja realmente cancelar o agendamento?</p>
-        <div class="popup-info">
-          <div>Data: xxx</div>
-          <div>Horário: xxx</div>
-          <div>Pet: xxx</div>
-          <div>Cliente: xxx</div>
-        </div>
-        <div class="popup-actions">
-          <button class="btn-confirm">Sim</button>
-          <button class="btn-cancel">Não</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.querySelector('.close-btn').onclick = () => {
-      document.querySelector('.popup-overlay').style.display = 'none';
-    };
-  
-    document.querySelector('.btn-cancel').onclick = () => {
-      document.querySelector('.popup-overlay').style.display = 'none';
-    };
-  </script>
-
-  <script>
-    const tbody = document.getElementById('produtos-tbody');
-    produtos.forEach(p => {
-      const row = `<tr>
-        <td>${p.nome}</td>
-        <td>${p.data}</td>
-        <td>R$ ${p.func}</td>
-        <td>${p.serv}</td>
-        <td>${p.dono}</td>
-        <td>${p.telefone}</td>
-        <td><span class="edit-icon">✏️</span></td>
-        <span class="delete-icon" onclick="abrirPopup('${p.data}', '${p.func}', '${p.nome}', '${p.dono}')">❌</span>
-      </tr>`;
-      tbody.innerHTML += row;
-    });
-  </script>
-
+  <script src="../../script/cancelarAgendamento.js"></script>
 </body>
 </html>

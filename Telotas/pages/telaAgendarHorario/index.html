@@ -21,19 +21,30 @@
   <div class="main">
     <div class="form-box">
       <div class="form-header">Agendamento</div>
-  <form>
+  <form id="form-agendarHorario">
     <div class="form-grid">
       <input type="text" placeholder="Nome Pet" />
-      <select>
-        <option disabled selected>Serviço</option>
+      <select id="servicos">
+        <option disabled selected>Serviços</option>
       </select>
-      <input type="text" placeholder="Telefone" />
-      <input type="text" placeholder="Data" />
-      <select>
+      <input id="cpf"type="text" placeholder="Cpf" />
+      <input id="data" OnKeyPress="formatar('####-##-##',this)" maxlength="10" minlength="10" type="text" placeholder="Data" />
+      <select id="funcionarios">
         <option disabled selected>Funcionário Responsável</option>
       </select>
+      <select id="horarios">
+        <option disabled selected>Horarios</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+      </select>
     </div>
-    <button type="submit" class="btn-submit">Agendar</button>
+    <button onClick="window.location.href='../telaAgenda'" type="submit" class="btn-submit">Agendar</button>
   </form>
 </div>
 

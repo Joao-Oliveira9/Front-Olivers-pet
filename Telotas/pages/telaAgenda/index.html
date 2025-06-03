@@ -31,7 +31,7 @@
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Data/Horário</th>
+            <th>Data</th>
             <th>Funcionário</th>
             <th>Serviço</th>
             <th>Telefone</th>
@@ -39,29 +39,14 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="produtos-tbody">
+        <tbody id="agendamentos-tbody">
           <!-- Tabelota -->
         </tbody>
       </table>
     </div>
   </div>
 
-  <script>
-    const tbody = document.getElementById('produtos-tbody');
-    produtos.forEach(p => {
-      const row = `<tr>
-        <td>${p.id}</td>
-        <td>${p.nome}</td>
-        <td>${p.data}</td>
-        <td>R$ ${p.func}</td>
-        <td>${p.serv}</td>
-        <td>${p.dono}</td>
-        <td>${p.telefone}</td>
-        <td><span class="edit-icon">✏️</span></td>
-      </tr>`;
-      tbody.innerHTML += row;
-    });
-  </script>
+  <script src="../../script/MostrarAgendamentos.js"></script>
 
 </body>
 </html>

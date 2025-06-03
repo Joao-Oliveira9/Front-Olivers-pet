@@ -67,7 +67,7 @@ body {
   background-color: #c03b32;
 }
 
-input {
+input, select {
   padding: 10px;
   border-radius: 8px;
   border: none;
