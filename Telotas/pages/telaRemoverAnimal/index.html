@@ -24,7 +24,7 @@
   <form id="form-removerAnimal">
     <div class="form-grid">
       <input id="nomeAnimal" type="text" placeholder="Nome" />
-      <input id="cpfDono" type="text" placeholder="CPF" />
+      <input id="cpfDono" type="text" OnKeyPress="formatar('###.###.###-##',this)" maxlength="14" minlength="14" placeholder="CPF" />
     </div>
     <button type="submit" class="btn-submit">Remover</button>
   </form>

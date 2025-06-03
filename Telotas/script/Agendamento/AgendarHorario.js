@@ -66,12 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = dia + "T" + hora + ":00"
 
+        console.log(data);
+        
         const agendamento = {
             nome: nome,
             cpf: cpf,
-            servico: servico,
             data: data,
-            funcionario: funcionario
+            funcionario: funcionario,
+            servico: servico
         };
 
         fetch("http://localhost:8080/agendarHorario", {
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(agendamento)
         })
         .then(response => {
+            console.log(response)
             if(!response.ok) throw new Error('Erro ao realizar o agendamento');
             
             return response.json();
