@@ -97,8 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(produto)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao registrar o produto');
-            
+            if(!response.ok) {
+                alert('Erro ao registrar o produto');
+                throw new Error('Erro ao registrar o produto');
+            }
             return response.json();
         })
         .then(data => {

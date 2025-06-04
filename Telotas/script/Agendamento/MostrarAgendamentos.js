@@ -11,7 +11,10 @@ function concluirAgendamento(id) {
             body: JSON.stringify(concluir)
         })
         .then(response => {
-            if(!response.ok) throw new Error('');
+            if(!response.ok) {
+                alert("Erro ao concluir agendamento.");
+                throw new Error("Erro ao concluir agendamento.");
+            }
             
             return response.json();
         })

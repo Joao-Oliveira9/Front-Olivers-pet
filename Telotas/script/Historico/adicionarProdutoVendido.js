@@ -43,8 +43,10 @@
             body: JSON.stringify(produto)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao registrar o produto vendido.');
-            
+            if(!response.ok) {
+                alert('Erro ao registrar o produto vendido.')
+                throw new Error('Erro ao registrar o produto vendido.');
+            }
             return response.json();
         })
         .then(data => {

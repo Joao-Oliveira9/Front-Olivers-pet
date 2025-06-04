@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(cancelamento)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao cancelar o agendamento');
+            if(!response.ok) {
+                alert("Erro ao cancelar agendamento.");
+                throw new Error("Erro ao cancelar agendamento.");
+            }
             
             return response.json();
         })

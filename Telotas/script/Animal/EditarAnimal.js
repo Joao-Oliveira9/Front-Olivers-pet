@@ -40,7 +40,10 @@ document.getElementById('form-editarAnimal').addEventListener('submit', async fu
         body: JSON.stringify(animalEditado)
     })
     .then(response => {
-        if(!response.ok) throw new Error('Erro ao editar animal');
+        if(!response.ok) {
+                alert("Erro ao editar animal.");
+                throw new Error('Erro ao editar animal.');
+            }
             
         return response.json();
     })

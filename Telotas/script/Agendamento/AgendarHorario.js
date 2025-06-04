@@ -85,7 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => {
             console.log(response)
-            if(!response.ok) throw new Error('Erro ao realizar o agendamento');
+            if(!response.ok) {
+                alert("Erro ao realizar agendamento.");
+                throw new Error("Erro ao realizar agendamento.");
+            }
             
             return response.json();
         })

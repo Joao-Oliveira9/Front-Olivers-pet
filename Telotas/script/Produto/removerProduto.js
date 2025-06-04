@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(produtoDeletar)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao deletar o produto');
+            if(!response.ok) {
+                alert('Erro ao deletar o produto');
+                throw new Error('Erro ao deletar o produto');
+            }
             
             return response.json();
         })

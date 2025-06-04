@@ -90,7 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(produtoEditado)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao buscar os produtos');
+            if(!response.ok) {
+                alert('Erro ao editar o produto');
+                throw new Error('Erro ao editar o produto');
+            }
             
             return response.json();
         })

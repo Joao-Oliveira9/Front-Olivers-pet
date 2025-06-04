@@ -123,8 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(agendamentoEditado)
         })
         .then(response => {
-            if(!response.ok) throw new Error('');
-            
+            if(!response.ok) {
+                alert("Erro ao editar agendamento.");
+                throw new Error("Erro ao editar agendamento.");
+            }
             return response.json();
         })
         .then(data => {

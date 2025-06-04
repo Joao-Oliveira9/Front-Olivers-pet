@@ -33,7 +33,10 @@ document.getElementById('form-removerAnimal').addEventListener('submit', async f
             body: JSON.stringify(animalDeletar)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao deletar o animal');
+            if(!response.ok) {
+                alert("Erro ao deletar animal.");
+                throw new Error('Erro ao deletar animal.');
+            }
             
             return response.json();
         })

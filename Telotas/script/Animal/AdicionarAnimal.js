@@ -40,8 +40,10 @@
             body: JSON.stringify(produto)
         })
         .then(response => {
-            if(!response.ok) throw new Error('Erro ao registrar animal.');
-            
+            if(!response.ok) {
+                alert("Erro ao registrar animal.");
+                throw new Error('Erro ao registrar animal.');
+            }
             return response.json();
         })
         .then(data => {
